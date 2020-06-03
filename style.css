@@ -69,7 +69,7 @@ nav
 }
 body
 {
-    background: url('../img/background.jpg');
+    background: url('background.jpg');
     font-family: 'Lexend Tera', sans-serif;
 }
 #jeux
