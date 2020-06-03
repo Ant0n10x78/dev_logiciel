@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<script>
+    console.log(document.cookie);
+    let point = document.cookie.split('; ').find(row => row.startsWith('point')).split('=')[1];
+    function white(){
+        document.cookie = 'color='+0x000000;
+    }
+    function yellow(){
+        document.cookie = 'color='+0xFFFF00;
+    }
+    function grey(){
+        document.cookie = 'color='+0xAAAAAA;
+    }
+    function blue(){
+        document.cookie = 'color='+0x0000FF;
+    }
+    function green(){
+        document.cookie = 'color='+0x00FF00;
+    }
+</script>
+<body>
+    <header>
+        <div id="titre_principal">
+            <div id="logo">
+                <img src="img/unnamed.png" alt="Logo" />
+                <a href="index.html"  style="text-decoration:none;color: black;" ><h1>BRICK SHOOTER</h1>   </a>  
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Jouer</a></li>
+                <li><a href="commande.html">Commande</a></li>
+                <li><a href="credit.html">Credit</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Cliquer sur votre Cuber et commencé la partie</h1>
+    <script>document.write("<h1>Point:"+point+"</h1>");</script>
+    <script>
+        document.write("<a onclick='white();' href='menu.html'><div style='background-color: grey;width:50px;height:50px;'></div></a><br>");
+        if (point >= 10){
+        document.write("<a onclick='grey();' href='menu.html'><div style='background-color: grey;width:50px;height:50px;'></div></a><br>");
+        }
+        if (point >= 100){
+        document.write("<a onclick='blue();' href='menu.html'><div style='background-color: blue;width:50px;height:50px;'></div></a><br>");
+        }
+        if (point >= 500){
+        document.write("<a onclick='green();' href='menu.html'><div style='background-color: green;width:50px;height:50px;'></div></a><br>");
+        }
+        if (point >= 1000){
+        document.write("<a onclick='yellow();' href='menu.html'><div style='background-color: yellow;width:50px;height:50px;'></div></a>");
+        }
+    </script>
+</body>
+</html>
