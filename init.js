@@ -21,8 +21,9 @@ if(!PIXI.utils.isWebGLSupported()){
       }
 
       //Init color of Cuber
+      if (document.cookie==null){
       colorCuber = document.cookie.split('; ').find(row => row.startsWith('color')).split('=')[1];
-
+      }
 
 
 
